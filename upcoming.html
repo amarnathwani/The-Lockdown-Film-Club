@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<title>The Lockdown Film Club</title>
+
+<!-- Specify viewport and link stylesheets/frameworks -->
+<!-- w3.css stylesheet imported, Montserrat font from google fonts, icons from fontawesome content delivery network (cdn), additional stylesheet style.css for supplementary css -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+    
+    <body>
+
+        <!-- Navbar -->
+            <div class="w3-top">
+              <!-- specifies bar layout, black color scheme and w3-card behaviour -->
+              <div class="w3-bar w3-black w3-card">
+                <!-- w3-button specifies button behaviour, w3-hide-medium (<992px) or small (<601px) as per w3css hides elements when viewport preceeds the amounts -->
+                <!-- href triggers javascript function (myFunction in the script tag at the bottom), toggles hamburger menu when available -->
+                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <!-- Menu items and their styling -->
+                <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+                <a href="upcoming.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">UPCOMING</a>
+                <a href="discussion.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DISCUSSION</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+                <a href="contact.html" class="w3-padding-large w3-button w3-hide-small w3-right">CONTACT</a>
+              </div>
+            </div>
+
+            <!-- Navbar for small screens (<601px), same rules as medium screen as above, function in script tag triggers hamburger menu -->
+            <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+              <a href="upcoming.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">UPCOMING</a>
+              <a href="discussion.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DISCUSSION</a>
+              <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+              <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            </div>
+
+        <!-- Page Content -->
+        <!-- Specifies content section, max-width and margin-top from menu bar -->
+        <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+          <!-- Parallax UPCOMING Section -->
+          <!-- each image is stored in it's own bgimg class, in chich a background-image is loaded by the css -->
+          <!-- they are slightly opaque and fixed position (in style.css) so other elements can move over them while they are still, creating the parallax -->
+            
+
+          <!-- First Parallax Image with Logo Text -->
+            <div class="bgimg-1 w3-display-container w3-opacity-min">
+              <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-xxlarge w3-text-white w3-wide">THE WAY I SEE IT</span>
+              </div>
+            </div>
+
+            <!-- Container (THE WAY I SEE IT Section) -->
+            <div class="w3-content w3-container w3-padding-64">
+              <h3 class="w3-center">The Way I See It</h3>
+              <p class="w3-center"><em>dir. Dawn Porter</em></p>
+              <p class="w3-center">Pete Souza captures historic and intimate moments as a photographer for President Barack Obama and President Ronald Reagan.</p>
+              <p class="w3-center">Cast: Pete Souza, Barack Obama...</p>
+            </div>
+
+
+            <!-- Second Parallax Image with Portfolio Text -->
+            <div class="bgimg-2 w3-display-container w3-opacity-min">
+              <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">TENET</span>
+              </div>
+            </div>
+
+            <!-- Container (TENET Section) -->
+            <div class="w3-content w3-container w3-padding-64">
+              <h3 class="w3-center">Tenet</h3>
+              <p class="w3-center"><em>dir. Christopher Nolan</em></p>
+              <p class="w3-center">A secret agent embarks on a dangerous, time-bending mission to prevent the start of World War III.</p>
+              <p class="w3-center">Cast: John David Washington, Robert Pattinson, Elizabeth Debicki...</p>
+            </div>
+
+            <!-- Third Parallax Image with Portfolio Text -->
+            <div class="bgimg-3 w3-display-container w3-opacity-min">
+              <div class="w3-display-middle">
+                 <span class="w3-xxlarge w3-text-white w3-wide">THE DEVIL ALL THE TIME</span>
+              </div>
+            </div>
+
+            <!-- Container (THE DEVIL ALL THE TIME Section) -->
+            <div class="w3-content w3-container w3-padding-64">
+              <h3 class="w3-center">The Devil All The Time</h3>
+              <p class="w3-center"><em>dir. Antonio Campos</em></p>
+              <p class="w3-center">A young man is devoted to protecting his loved ones in a town full of corruption and sinister characters.</p>
+              <p class="w3-center">Cast: Tom Holland, Robert Pattinson, Bill Skarsgård...</p>
+            </div>
+        
+          <!-- The Tickets Section -->
+          <div class="w3-black" id="tickets">
+            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+              <h2 class="w3-wide w3-center">TICKETS</h2>
+              <p class="w3-opacity w3-center"><i>If you want to join the cinema get togethers, book your tickets below!</i></p><br>
+              
+              <!-- Each movie element is a w3-container that acts like a card -->
+              <!-- the buy tickets button changes the display value of the div with class ticketModal to "block" rather than "none" -->
+              <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom w3-padding-small">
+                  <img src="/Photos/thewaybook.jpg" alt="The Way I See It" style="width:100%" class="w3-hover-opacity">
+                  <div class="w3-container w3-white">
+                    <p><b>The Way I See It</b></p>
+                    <p class="w3-opacity">Mon 21 Sep 2020 | 8:30pm</p>
+                    <p>TIFF Bell Lightbox</p>
+                    <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom w3-padding-small">
+                  <img src="/Photos/tenetbook.jpg" alt="Tenet" style="width:100%" class="w3-hover-opacity">
+                  <div class="w3-container w3-white">
+                    <p><b>Tenet</b></p>
+                    <p class="w3-opacity">Wed 30 Sep 2020 | 6:00pm</p>
+                    <p>Scotiabank Theatre</p>
+                    <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom w3-padding-small">
+                  <img src="/Photos/devilbook.jpeg" alt="The Devil All The Time" style="width:100%" class="w3-hover-opacity">
+                  <div class="w3-container w3-white">
+                    <p><b>The Devil All The Time</b></p>
+                    <p class="w3-opacity">Wed 14 Oct 2020 | 8:00pm</p>
+                    <p>TIFF Bell Lightbox</p>
+                    <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <!-- Ticket Modal -->
+          <!-- w3-modal class creates a simple pop-up modal and I added an integrated form, animates with w3-animate-top -->
+          <div id="ticketModal" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+              <header class="w3-container w3-white w3-center w3-padding-32"> 
+                <span onclick="document.getElementById('ticketModal').style.display='none'" 
+               class="w3-button w3-white w3-xlarge w3-display-topright">×</span>
+                <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+              </header>
+              <div class="w3-container">
+                <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+                <input class="w3-input w3-border" type="text" placeholder="How many?">
+                <p><label><i class="fa fa-user"></i> Send To</label></p>
+                <input class="w3-input w3-border" type="text" placeholder="Enter email">
+                <button class="w3-button w3-block w3-black w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+                <p class="w3-right"><a href="#" class="w3-text-blue">Help?</a></p>
+              </div>
+            </div>
+          </div>
+
+        <!-- End Page Content -->
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+        </footer>
+
+        <script>
+        // used to toggle the menu on medium and small screens when clicking on the menu button
+        function myFunction() {
+          // if element x's w3-show property does not exist, add this class to the element, else, remove w3-show from element
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        // similar to abbove, on any element that is not the ticketModal, display value set to none
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+
+    </body>
+    
+</html>

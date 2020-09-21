@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<title>The Lockdown Film Club</title>
+
+<!-- Specify viewport and link stylesheets/frameworks -->
+<!-- w3.css stylesheet imported, Montserrat font from google fonts, icons from fontawesome content delivery network (cdn), additional stylesheet style.css for supplementary css -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+    
+    
+    <body>
+
+        <!-- Navbar -->
+            <div class="w3-top">
+              <!-- specifies bar layout, black color scheme and w3-card behaviour -->
+              <div class="w3-bar w3-black w3-card">
+                <!-- w3-button specifies button behaviour, w3-hide-medium (<992px) or small (<601px) as per w3css hides elements when viewport preceeds the amounts -->
+                <!-- href triggers javascript function (myFunction in the script tag at the bottom), toggles hamburger menu when available -->
+                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <!-- Menu items and their styling -->
+                <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+                <a href="upcoming.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">UPCOMING</a>
+                <a href="discussion.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DISCUSSION</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+                <a href="contact.html" class="w3-padding-large w3-button w3-hide-small w3-right">CONTACT</a>
+              </div>
+            </div>
+
+            <!-- Navbar for small screens (<601px), same rules as medium screen as above, function in script tag triggers hamburger menu -->
+            <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+              <a href="upcoming.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">UPCOMING</a>
+              <a href="discussion.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DISCUSSION</a>
+              <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+              <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            </div>
+
+            <!-- Page Content -->
+            <!-- Specifies content section, max-width and margin-top from menu bar -->
+            <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+              <!-- Fallout Landing Image -->
+              <header class="w3-display-container w3-wide" id="home">
+                <img class="w3-image" src="/Photos/falloutlanding.jpg" alt="Fallout" style="width:100%; height:660px; object-fit:cover">
+                <div class="w3-display-left w3-padding-large">
+                  <h1 class="w3-large w3-text-white">THE</h1>
+                  <h1 class="w3-xxlarge w3-text-white"><b>LOCKDOWN DISCUSSION</b></h1>
+                </div>
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                  <h4>Mission Impossible: Fallout</h4> 
+                </div>
+              </header>
+
+              <!-- Establish a w3 Grid -->
+              <div class="w3-row w3-padding w3-white">
+
+                <!-- Blog Entries -->
+                <!-- w3.css grid breaks a grid up into 12 columns for each: large(l), medium(m), and small(s) -->
+                <!-- specified that my blog entries are to take up 8 columns when in large viewport, and 12 columns (entire screen) when in small or medium viewport -->
+                <div class="w3-col l8 s12">
+
+                  <!-- Blog Entry 1 -->
+                  <div class="w3-container w3-white w3-margin w3-padding-large">
+                    <div class="w3-center">
+                      <h3>DUNKIRK</h3>
+                      <h5>Released: <span class="w3-opacity">Dec 12, 2017</span></h5>
+                    </div>
+
+                    <div class="w3-justify">
+                      <img src="/Photos/dunkirk.jpg" alt="Dunkirk" style="width:100%" class="w3-padding-16">
+                        <p><strong class="w3-large">92%</strong> Dunkirk serves up emotionally satisfying spectacle, delivered by a writer-director in full command of his craft and brought to life by a gifted ensemble cast that honors the fact-based story.</p>
+                      <!-- Like button responds to click by changing the icon, and changes word to liked with likeFunction in script tags -->
+                      <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+                      <!-- Replies button triggers comments by adding w3-show to comments section with id demo(1/2/3) when clicked -->
+                      <p class="w3-right"><button class="w3-button w3-white w3-border" onclick="myFunction2('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
+                      <p class="w3-clear"></p>
+
+                      <!-- Comments -->
+                      <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+                        <hr>
+                          <div class="w3-col l2 m3">
+                            <img src="/Photos/chrisprofile.jpeg" style="width:90px;">
+                          </div>
+                          <div class="w3-col l10 m9">
+                            <h4>Chris <span class="w3-opacity w3-medium">Jan 11, 2018, 6:32 PM</span></h4>
+                            <p>I've completed story mode, I'm just here for kicks.</p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+
+                  <!-- Blog Entry 2 -->
+                  <div class="w3-container w3-white w3-margin w3-padding-large">
+                    <div class="w3-center">
+                      <h3>BUTCH CASSIDY AND THE SUNDANCE KID</h3>
+                      <h5>Released: <span class="w3-opacity">Oct 24, 1969</span></h5>
+                    </div>
+
+                    <div class="w3-justify">
+                      <img src="/Photos/bs.jpg" alt="Butch and Sundance" style="width:100%" class="w3-padding-16">
+                      <p><strong class="w3-large">90%</strong> The true story of fast-draws and wild rides, battles with posses, train and bank robberies, a torrid love affair and a new lease on outlaw life in far away Bolivia. It is also a character study of a remarkable friendship between Butch - possibly the most likeable outlaw in frontier history - and his closest associate, the fabled, ever-dangerous Sundance Kid. </p>
+                      <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+                      <p class="w3-right"><button class="w3-button w3-white w3-border" onclick="myFunction2('demo2')"><b>Replies  </b> <span class="w3-tag w3-white">2</span></button></p>
+                      <p class="w3-clear"></p>
+
+                      <!-- Comments -->
+                      <div id="demo2" style="display:none">
+                        <div class="w3-row">
+                          <hr>
+                          <div class="w3-col l2 m3">
+                            <img src="/Photos/sundanceprofile.jpeg" style="width:90px;">
+                          </div>
+                          <div class="w3-col l10 m9">
+                            <h4>Sundance <span class="w3-opacity w3-medium">Oct 26, 1969, 10:52 PM</span></h4>
+                            <p>You just keep thinkin, Butch, that's what you're good at.</p><br>
+                          </div>
+                        </div>
+                        <div class="w3-row w3-margin-bottom">
+                          <div class="w3-col l2 m3">
+                            <img src="/Photos/paulprofile.jpeg" style="width:90px;">
+                          </div>
+                          <div class="w3-col l10 m9">
+                            <h4>Butch <span class="w3-opacity w3-medium">Oct 26, 1969, 10:52 PM</span></h4>
+                            <p>Boy, I got vision and the rest of the world wears bifocals.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+
+                  <!-- Blog Entry 3 -->
+                  <div class="w3-container w3-white w3-margin w3-padding-large">
+                    <div class="w3-center">
+                      <h3>ONCE UPON A TIME...IN HOLLYWOOD</h3>
+                      <h5>Released: <span class="w3-opacity">Jul 26, 2019</span></h5>
+                    </div>
+
+                    <div class="w3-justify">
+                      <img src="/Photos/once.jpg" alt="Once Upon" style="width:100%" class="w3-padding-16">
+                      <p><strong class="w3-large">85%</strong> Thrillingly unrestrained yet solidly crafted, Once Upon a Time in Hollywood tempers Tarantino's provocative impulses with the clarity of a mature filmmaker's vision.</p>
+                      <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+                      <p class="w3-right"><button class="w3-button w3-white w3-border" onclick="myFunction2('demo3')"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
+                      <p class="w3-clear"></p>
+
+                      <!-- Comments -->
+                      <div id="demo3" style="display:none">
+                        <hr>
+                        <div class="w3-row w3-margin-bottom">
+                          <div class="w3-col l2 m3">
+                            <img src="/Photos/bradprofile.jpeg" style="width:90px;">
+                          </div>
+                          <div class="w3-col l10 m9">
+                            <h4>Brad <span class="w3-opacity w3-medium">Apr 7, 2020, 7:22 PM</span></h4>
+                            <p>The first rule of fight club is "You do not talk about fight club".</p>
+                          </div>
+                        </div>
+                        <div class="w3-row w3-margin-bottom">
+                          <div class="w3-col l2 m3">
+                            <img src="/Photos/leoprofile.jpeg" style="width:90px;">
+                          </div>
+                          <div class="w3-col l10 m9">
+                            <h4>Leo <span class="w3-opacity w3-medium">Apr 8, 2020, 10:32 PM</span></h4>
+                            <p>We get it, B.</p>
+                          </div>
+                        </div>
+                        <div class="w3-row w3-margin-bottom">
+                          <div class="w3-col l2 m3">
+                            <img src="/Photos/quentinprofile.jpeg" style="width:90px;">
+                          </div>
+                          <div class="w3-col l10 m9">
+                            <h4>Quentin <span class="w3-opacity w3-medium">Apr 9, 2020, 9:12 PM</span></h4>
+                            <p>What's going on here?</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+
+                <!-- END BLOG ENTRIES -->
+                </div>
+
+                <!-- Ancillary Posts and Tags -->
+                <!-- specifies our ancillary section will take up 4 columns in large viewport, and defaults to whole screen if medium or small -->
+                <div class="w3-col l4">
+
+                  <!-- Popular Discussions -->
+                  <!-- Simple containers with inner containers representing an img of a user, their username, and post title -->
+                  <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-black">
+                      <h4>Popular Posts</h4>
+                    </div>
+                    <ul class="w3-ul w3-hoverable w3-white">
+                      <li class="w3-padding-16">
+                        <img src="/Photos/henryprofile.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                        <span class="w3-large">Henry</span>
+                        <br>
+                        <span>I should be the next 007, right?</span>
+                      </li>
+                      <li class="w3-padding-16">
+                        <img src="/Photos/georgieprofile.jpeg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                        <span class="w3-large">George</span>
+                        <br>
+                        <span>Amal Clooney 2024.</span>
+                      </li>
+                      <li class="w3-padding-16">
+                        <img src="/Photos/cristiprofile.jpeg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                        <span class="w3-large">Cristi</span>
+                        <br>
+                        <span>Guys, my movie is good, check online.</span>
+                      </li>
+                      <li class="w3-padding-16">
+                        <img src="/Photos/chadprofile.jpeg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+                        <span class="w3-large">Chadwick</span>
+                        <br>
+                        <span>RIP King</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <hr>
+
+
+                  <!-- Search By Genre -->
+                  <!-- Search by tag section (inactive), which locates posts by tags -->
+                  <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-black">
+                      <h4>Movies by Genre</h4>
+                    </div>
+                    <div class="w3-container w3-white">
+                      <p>
+                        <span class="w3-tag w3-black w3-margin-bottom">Action</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Animation</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Thriller</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Adventure</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Horror</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Western</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Nolan</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Pixar</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Noir</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Romance</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Mystery</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Drama</span>
+                      </p>
+                    </div>
+                  </div>
+                  <hr>
+
+                <!-- END Ancillary Posts and Tags -->
+                </div>
+
+              <!-- END GRID -->
+              </div>
+
+            <!-- End Page Content -->
+            </div>
+
+
+            <!-- Footer -->
+            <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+              <i class="fa fa-facebook-official w3-hover-opacity"></i>
+              <i class="fa fa-instagram w3-hover-opacity"></i>
+              <i class="fa fa-twitter w3-hover-opacity"></i>
+            </footer>
+
+            <script>
+            // used to toggle the menu on medium and small screens when clicking on the menu button
+            function myFunction() {
+              // if element x's w3-show property does not exist, add this class to the element, else, remove w3-show from element
+              var x = document.getElementById("navDemo");
+              if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+              } else { 
+                x.className = x.className.replace(" w3-show", "");
+              }
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            // similar to abbove, on any element that is not the ticketModal, display value set to none
+            var modal = document.getElementById('ticketModal');
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+
+            // Toggle between hiding and showing blog replies/comments
+            document.getElementById("myBtn").click();
+            function myFunction2(id) {
+              // adds a w3-show property to class demo1/2/3, else replaces w3-show with empty string to hide
+              var x = document.getElementById(id);
+              if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+              } else { 
+                x.className = x.className.replace(" w3-show", "");
+              }
+            }
+            
+            // onclick, like function changes fontweight and innerHTML of the like button container
+            function likeFunction(x) {
+              x.style.fontWeight = "bold";
+              x.innerHTML = "✓ Liked";
+            }
+            </script>
+
+    </body>
+    
+</html>

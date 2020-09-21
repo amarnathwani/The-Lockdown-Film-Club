@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<title>The Lockdown Film Club</title>
+
+<!-- Specify viewport and link stylesheets/frameworks -->
+<!-- w3.css stylesheet imported, Montserrat font from google fonts, icons from fontawesome content delivery network (cdn), additional stylesheet style.css for supplementary css -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+    
+    <body>
+
+        <!-- Navbar -->
+            <div class="w3-top">
+              <!-- specifies bar layout, black color scheme and w3-card behaviour -->
+              <div class="w3-bar w3-black w3-card">
+                <!-- w3-button specifies button behaviour, w3-hide-medium (<992px) or small (<601px) as per w3css hides elements when viewport preceeds the amounts -->
+                <!-- href triggers javascript function (myFunction in the script tag at the bottom), toggles hamburger menu when available -->
+                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <!-- Menu items and their styling -->
+                <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+                <a href="upcoming.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">UPCOMING</a>
+                <a href="discussion.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DISCUSSION</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+                <a href="contact.html" class="w3-padding-large w3-button w3-hide-small w3-right">CONTACT</a>
+              </div>
+            </div>
+
+            <!-- Navbar for small screens (<601px), same rules as medium screen as above, function in script tag triggers hamburger menu -->
+            <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+              <a href="upcoming.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">UPCOMING</a>
+              <a href="discussion.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DISCUSSION</a>
+              <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+              <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            </div>
+
+        <!-- Page Content -->
+        <!-- Specifies content section, max-width and margin-top from menu bar -->
+        <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+          <!-- Landing Movie Images Section and Banner -->
+          <!-- Each slide is displayed for 5000 frames (5 seconds) as defined by function carousel -->
+          <!-- Loads photos from photos folder, adds our "jumbo" website title and fades in movie titles with w3-animate-fading on bottom-middle (w3-bottommiddle) -->
+          <div class="mySlides w3-display-container w3-center">
+            <img src="/Photos/fightclublanding.jpg" style="width:100%; height:760px; object-fit:cover">
+            <div class="w3-display-middle w3-container w3-text-white w3-padding-32 ">
+              <h1 class="w3-jumbo">The Lockdown Film Club</h1>
+            </div>
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+              <h4 class="w3-animate-fading">Fight Club</h4> 
+            </div>
+          </div>
+          <div class="mySlides w3-display-container w3-center">
+            <img src="/Photos/readyornotlanding.jpg" style="width:100%; height:760px; object-fit:cover">
+            <div class="w3-display-middle w3-container w3-text-white w3-padding-32 ">
+              <h1 class="w3-jumbo">The Lockdown Film Club</h1>
+            </div>
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+              <h4 class="w3-animate-fading">Ready Or Not</h4> 
+            </div>
+          </div>
+          <div class="mySlides w3-display-container w3-center">
+            <img src="/Photos/platformlanding.jpg" style="width:100%; height:760px; object-fit:cover">
+            <div class="w3-display-middle w3-container w3-text-white w3-padding-32 ">
+              <h1 class="w3-jumbo">The Lockdown Film Club</h1>
+            </div>
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+              <h4 class="w3-animate-fading">The Platform</h4>
+            </div>
+          </div>
+          
+          <!-- Intro Section -->
+          <!-- max-width specifies content width, w3-justify will use these -->
+          <!-- respective pad elements to space the title from the paragraph -->
+          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <h2 class="w3-wide w3-padding-32">THE CLUB</h2>
+            <p class="w3-justify w3-padding-24">We created a film club for those mostly at home that are passionate about film and tv. You can read more <a href="about.html">About Us</a> if you like. Our website is a compilation of reviews, discussion, news about upcoming movies and our limited get togethers for the time being. Twice a month, we get together to watch a film in theatres that we're looking forward to. With all the measures in place, we would still like to support the films and teams we love however we can. Send us a message if you'd like to join in, or feel free to purchase tickets to our gatherings <a href="upcoming.html">here</a>.</p>
+
+            <p class="w3-justify w3-padding-24">You can read more about individual films on our <a>Discussion</a> section, and contribute your ideas, opinions and reflections on film there. If you have suggestions for films to see, <a>give us a shout</a> and we can look into it. If you like what you see, give us a follow on our social medias down below. Have fun, and enjoy the show!</p>
+          </div>
+
+
+        <!-- End Page Content -->
+        </div>
+
+        
+        <!-- Footer -->
+        <!-- footer is a container with padding and centered items, each an icon imported w3.css stylsheet, standard icons -->
+        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+        </footer>
+
+        <!-- Added the script tag at the end to prevent buggy loading and stalls on the static elements of the website -->
+        <script>
+        // myIndex sets to 0 (first image in array), calls carousel()
+        var myIndex = 0;
+        carousel();
+        
+        // carousel takes each item tagged with .mySlides class and adds it to an array, defaults their display values to none to begin with
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          
+          // advances myIndex array, if greater than length, reset
+          // display first element (photo) as block and setTimeout brings us to the top of the function, advancing myIndex by 1
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 5000);    
+        }
+
+        // used to toggle the menu on medium and small screens when clicking on the menu button
+        function myFunction() {
+          // if element x's w3-show property does not exist, add this class to the element, else, remove w3-show from element
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        // similar to abbove, on any element that is not the ticketModal, display value set to none
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+
+    </body>
+    
+</html>
